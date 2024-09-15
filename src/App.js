@@ -1,23 +1,30 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import Form from './components/forms/Form';
 
 function App() {
+
+  const [value , setValue] = useState([])
+
+  const data = (a) => {
+    setValue((prevState) => {
+      return[...prevState , a]
+    })
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <Form data = {data} />
+        {value.map((item) => {
+          return(
+            <div className='mother'>
+              <h1>{item.text}</h1>
+              <h1>{item.number}</h1>
+              <h1>{item.img}</h1>
+
+            </div>
+          )
+        })}
     </div>
   );
 }

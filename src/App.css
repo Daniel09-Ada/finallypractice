@@ -28,6 +28,18 @@
   color: #61dafb;
 }
 
+body{
+  background-image: url("https://img.freepik.com/free-photo/neon-tropical-monstera-leaf-banner_53876-138943.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1726185600&semt=ais_hybrid");
+}
+
+.mother{
+  border: 2px solid white;
+  color: white;
+}
+
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
